@@ -1,0 +1,35 @@
+{
+  "name": "FormQuestion",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "formId": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+    "relations": {
+	"form": {
+	    "type": "belongsTo",
+	    "model": "Form",
+	    "foreignKey": "formId"
+	},	
+	"formQuestionOption": {
+	    "type": "hasMany",
+	    "model": "FormQuestionOption",
+	    "foreignKey": "formQuestionId"
+	}	
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "FormQuestionOption",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "formQuestionId": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+    "relations": {	
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,7 @@
+const app = require('./server/server');
+
+function testJoinQueryLoopback() {
+    app.models.Form.find({
+	include: "FormQuestion"
+    })
+}
